@@ -39,7 +39,7 @@ What data do we have ?
 
 We have access to the understat.com/league data, that regroup a unique feature : expected goals (xG), expected goals against (xGA) and expected points (xPoints). The site reports such metrics for all football matches played since 2014 and in major European leagues such as :  Ligue 1, Liga, Calcio (Serie A), Bundesliga, EPL (Premier League), RFPL (Russian championship).
 
-He consider at the end 14 361 matches and 174 teams in 6 championship.
+He consider at the end 14 361 matches and 174 teams in 6 championship. To get the data we will need to scrape the website.
 
 ### Methods and code 
 
