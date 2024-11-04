@@ -2,7 +2,7 @@
 
 ## Questions to help understand the subject
 
-### What is the main research question or hypothesis of the paper?
+### What is the main research question or hypothesis of the paper?
 
 - The main research question is to identify ether yes or not the COVID had an impact on the home advantage in Football.
 
