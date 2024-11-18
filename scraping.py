@@ -26,10 +26,6 @@ paths_complementary = [
     "/2018",
     "/2019",
     "/2020",
-    "/2021",
-    "/2022",
-    "/2023",
-    "/2024",
 ]
 
 championships = {
@@ -57,12 +53,25 @@ def extract_json_data_teamsData(json_data, championship):
                     "id": id,
                     "title": title,
                     "championship": championship,
+                    "h_a": match.get("h_a"),
                     "xG": match.get("xG"),
                     "xGA": match.get("xGA"),
-                    "xpts": match.get("xpts"),
-                    "pts": match.get("pts"),
-                    "date": match.get("date"),
+                    "npxG": match.get("npxG"),
+                    "npxGA": match.get("npxGA"),
+                    "ppda": match.get("ppda"),
+                    "ppda_allowed": match.get("ppda_allowed"),
+                    "deep": match.get("deep"),
+                    "deep_allowed": match.get("deep_allowed"),
                     "scored": match.get("scored"),
+                    "missed": match.get("missed"),
+                    "xpts": match.get("xpts"),
+                    "result": match.get("result"),
+                    "date": match.get("date"),
+                    "wins": match.get("wins"),
+                    "draws": match.get("draws"),
+                    "loses": match.get("loses"),
+                    "pts": match.get("pts"),
+                    "npxGD": match.get("npxGD"),
                 }
                 extracted_data.append(match_data)
     except json.JSONDecodeError as e:
@@ -92,7 +101,6 @@ for path in paths:
             response += recv.decode("utf-8")
 
         json_matches = json_pattern.findall(response)
-
         for match in json_matches:
             try:
                 match = match.strip("'").encode("utf-8").decode("unicode_escape")
@@ -117,12 +125,27 @@ with open(output_file, mode="w", newline="") as file:
             "Team ID",
             "Team Name",
             "Championship",
-            "date",
+            "h_a",
             "xG",
             "xGA",
-            "xpts",
-            "pts",
+            "npxG",
+            "npxGA",
+            "ppda_att",
+            "ppda_def",
+            "ppda_allowed_att",
+            "ppda_allowed_def",
+            "deep",
+            "deep_allowed",
             "scored",
+            "missed",
+            "xpts",
+            "result",
+            "date",
+            "wins",
+            "draws",
+            "loses",
+            "pts",
+            "npxGD",
         ]
     )
 
@@ -132,12 +155,27 @@ with open(output_file, mode="w", newline="") as file:
                 match_data["id"],
                 match_data["title"],
                 match_data["championship"],
-                match_data["date"],
+                match_data["h_a"],
                 match_data["xG"],
                 match_data["xGA"],
-                match_data["xpts"],
-                match_data["pts"],
+                match_data["npxG"],
+                match_data["npxGA"],
+                match_data["ppda"]["att"],
+                match_data["ppda"]["def"],
+                match_data["ppda_allowed"]["att"],
+                match_data["ppda_allowed"]["def"],
+                match_data["deep"],
+                match_data["deep_allowed"],
                 match_data["scored"],
+                match_data["missed"],
+                match_data["xpts"],
+                match_data["result"],
+                match_data["date"],
+                match_data["wins"],
+                match_data["draws"],
+                match_data["loses"],
+                match_data["pts"],
+                match_data["npxGD"],
             ]
         )
 

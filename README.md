@@ -55,4 +55,59 @@ As variables : results, xPoints, result_away and xPointsAway.
 
 ### Results and Metrics 
 
+I will explain for each methods determined above how the results are obtained and what are the metrics used to evaluate the results.
+
+1. The result here is simply displayed in a table with bar charts with 4 columns : LEAGUE, YEAR, DIFF_POINTS_HOMEAWAY, DIFF_XPOINTS_HOMEAWAY.
+
+...
+
+2.
+
+...
+
+3. 
+
+...
+
+4.
+
+... 
+
+## Reproduce the results
+
+
+### Prepare and Reuse Code/Data
+
+Since there where no api to get the data, I use a python script to scrape the data from the website, I extracted the json data from this line : `json_pattern = re.compile(r"var\ teamsData\ =\ JSON\.parse\((.*?)\)")`.
+Here is how I decided to organize the data, I successfully scraped a total of 28 722 rows meaning 14 361 matches from 174 teams in 6 championship from 2014 to 2020 just like the original report.
+
+Here is a small explanation of the data :
+- `"id"`: Id of the team 
+- `"title"`: Name of the team
+- `"championship"`: Name of the championship
+- `"h_a"`: Indicates the match was an away game.
+- `"xG"`: Expected goals.
+- `"xGA"`: Expected goals against.
+- `"npxG"`: Non-penalty expected goals.
+- `"npxGA"`: Non-penalty expected goals against.
+- `"ppda"`: Passes per defensive action, with `"att"` (attempts) and `"def"` (defensive actions).
+- `"ppda_allowed"`: Passes per defensive action allowed, with `"att"` and `"def"`.
+- `"deep"`: Number of deep completions.
+- `"deep_allowed"`: Number of deep completions allowed.
+- `"scored"`: Goals scored.
+- `"missed"`: Goals conceded.
+- `"xpts"`: Expected points.
+- `"result"`: Match result.
+- `"date"`: Date and time of the match.
+- `"wins"`: Number of wins.
+- `"draws"`: Number of draws.
+- `"loses"`: Number of losses.
+- `"pts"`: Points earned.
+- `"npxGD"`: Non-penalty expected goal difference.
+
+
+### Code Setup and Environment
+
+The study does not provide any information about the environment used to run the code. I will use a Jupyter notebook to run the code.
+
 
