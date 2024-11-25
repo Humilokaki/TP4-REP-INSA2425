@@ -40,7 +40,7 @@ championships = {
 json_pattern = re.compile(r"var\ teamsData\ =\ JSON\.parse\((.*?)\)")
 
 
-def extract_json_data_teamsData(json_data, championship):
+def extract_json_data_teamsData(json_data, championship, season):
     extracted_data = []
     try:
         json_data = json.loads(json_data)
@@ -53,6 +53,7 @@ def extract_json_data_teamsData(json_data, championship):
                     "id": id,
                     "title": title,
                     "championship": championship,
+                    "season": season,
                     "h_a": match.get("h_a"),
                     "xG": match.get("xG"),
                     "xGA": match.get("xGA"),
@@ -104,7 +105,9 @@ for path in paths:
         for match in json_matches:
             try:
                 match = match.strip("'").encode("utf-8").decode("unicode_escape")
-                extracted_data = extract_json_data_teamsData(match, championships[path])
+                extracted_data = extract_json_data_teamsData(
+                    match, championships[path], path_complementary[1:]
+                )
                 extracted_json_data.extend(
                     extracted_data
                 )  # Append the structured data directly
@@ -116,15 +119,16 @@ for path in paths:
         ssl_client_socket.close()
 
 # Writing data to CSV
-output_file = "data.csv"
+output_file = "data/understat-football-matches-2014-2020.csv"
 
 with open(output_file, mode="w", newline="") as file:
     writer = csv.writer(file)
     writer.writerow(
         [
-            "Team ID",
-            "Team Name",
-            "Championship",
+            "team_id",
+            "team_name",
+            "championship",
+            "season",
             "h_a",
             "xG",
             "xGA",
@@ -155,6 +159,7 @@ with open(output_file, mode="w", newline="") as file:
                 match_data["id"],
                 match_data["title"],
                 match_data["championship"],
+                match_data["season"],
                 match_data["h_a"],
                 match_data["xG"],
                 match_data["xGA"],

@@ -43,7 +43,7 @@ He consider at the end 14 361 matches and 174 teams in 6 championship. To get th
 
 ### Methods and code 
 
-1. Table showing the difference between points gained at home and away (same with xPoints) from 2014 to 2018 for the 6 championships
+1. Table showing the difference between points gained at home and away (same with xPoints) from 2014 to 2020 for the 6 championships
 
 2. Plotting the evolution of mean gained points (per match) for all seasons from 2014 and 2020
 
@@ -74,7 +74,6 @@ I will explain for each methods determined above how the results are obtained an
 ... 
 
 ## Reproduce the results
-
 
 ### Prepare and Reuse Code/Data
 
@@ -108,6 +107,30 @@ Here is a small explanation of the data :
 
 ### Code Setup and Environment
 
-The study does not provide any information about the environment used to run the code. I will use a Jupyter notebook to run the code.
+The study does not provide any information about the environment used to run the code. It seems though that a jupyter notebook was used to run the code.
+
+Here the version of the libraries used in the code :
+
+- python : 3.10.12
+- pandas : 1.5.2
+- ...
+
+A Dockerfile is provided to run the code in a container.
+
+### Analyze and Document Reproduced Results
+
+### Document Any Deviations or Observations
+
+### Draw Conclusions: Is it Reproducible ?
+
+### Variability factors
+
+- The source of data
+
+- The version of the data, the data used in the study is from 2014 to 2020 but we could use a larger dataset.
+
+
+
+
 
 
