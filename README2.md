@@ -80,19 +80,20 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
 ## Replicability
 
 ### Variability Factors
-- **Source of Data**: Understat's league data from 2014–2020.
 - **Version of Data**: Potential inclusion of a larger dataset for extended analysis by using an other source.
 - **Statistical Tests**: Alternative tests for robustness.
-
+- **Parameters**: Different parameters for statistical tests.
+- **Environment**: Use of Python 3.9 for enhanced performance and compatibility with newer libraries.
 
 ### Variability Factors
 - **List of Factors**: Identify all potential sources of variability (e.g., dataset splits, random seeds, hardware).  
   Example table:
-  | Variability Factor | Possible Values     | Relevance                                   |
-  |--------------------|---------------------|--------------------------------------------|
-  | Random Seed        | [0, 42, 123]       | Impacts consistency of random processes    |
-  | Hardware           | CPU, GPU (NVIDIA)  | May affect computation time and results    |
-  | Dataset Version    | v1.0, v1.1         | Ensures comparability across experiments   |
+  | Variability Factor | Possible Values     | Relevance                                    |
+  |--------------------|---------------------|----------------------------------------------|
+  | Version of Data    | 2014->2024                | Impacts consistency of random processes      |
+  | Statistical Tests  | Test t, permutation_test | May affect computation time and results      |
+  | Parameters         |    A voir       | Ensures comparability across experiments     |
+  | Version of Python  | 3.8, 3.9            | Compatibility and performance considerations |
 
 - **Constraints Across Factors**:  
   - Document any constraints or interdependencies among variability factors.  
