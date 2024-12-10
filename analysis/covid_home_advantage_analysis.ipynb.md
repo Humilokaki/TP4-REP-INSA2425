@@ -22,7 +22,7 @@ jupyter:
 import pandas as pd
 
 # Load the data
-data = pd.read_csv('data/understat-football-matches-2014-2020.csv')
+data = pd.read_csv('../data/understat-football-matches-2014-2020.csv')
 
 # Filter the data to only include matches from 2014 to 2018 seasons
 data = data[(data['season'] >= 2014) & (data['season'] <= 2020)]
@@ -95,7 +95,7 @@ styled_table
 ```python
 import pandas as pd
 
-data = pd.read_csv('data/understat-football-matches-2014-2020.csv')
+data = pd.read_csv('../data/understat-football-matches-2014-2020.csv')
 
 # We only need the points, xPoints, result_away, xPointsAway, championships and season columns
 data = data[['pts', 'xpts', 'h_a', 'championship', 'season']]
@@ -169,7 +169,7 @@ from scipy.stats import wilcoxon
 import numpy as np
 import pandas as pd
 
-data = pd.read_csv('data/understat-football-matches-2014-2020.csv')
+data = pd.read_csv('../data/understat-football-matches-2014-2020.csv')
 
 data = data[(data['season'] >= 2014) & (data['season'] <= 2020)]
 
@@ -266,7 +266,7 @@ styled_wilcoxon_df
 ```python
 import pandas as pd
 
-df = pd.read_csv('data/understat-football-matches-2014-2020.csv')
+df = pd.read_csv('../data/understat-football-matches-2014-2020.csv')
 
 df = df[(df['season'] >= 2014) & (df['season'] <= 2020)]
 
