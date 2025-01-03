@@ -1,8 +1,21 @@
+import csv
+import json
+import re
 import socket
 import ssl
-import re
-import json
-import csv
+import argparse
+
+parser = argparse.ArgumentParser(
+    description="Scrape football match data from Understat for a specific range of years."
+)
+parser.add_argument(
+    "start_year", type=int, help="The starting year of the season (e.g., 2014)."
+)
+parser.add_argument(
+    "end_year", type=int, help="The ending year of the season (e.g., 2020)."
+)
+
+args = parser.parse_args()
 
 HOST = "understat.com"
 PORT = 443
@@ -18,15 +31,7 @@ paths = [
     "/league/RFPL",
 ]
 
-paths_complementary = [
-    "/2014",
-    "/2015",
-    "/2016",
-    "/2017",
-    "/2018",
-    "/2019",
-    "/2020",
-]
+paths_complementary = [f"/{year}" for year in range(args.start_year, args.end_year + 1)]
 
 championships = {
     "/league/Ligue_1": "Ligue 1",

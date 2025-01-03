@@ -67,12 +67,12 @@ The original study's methodology was reproducible with the given data and tools.
 
 ### Document Any Deviations or Observations
 - I noticed a major deviation in the Non-parametrical Wilcoxon Signed-Rank test results. The original study reported a constant p-value for xG of 0.000515 for all leagues. However, my results showed variations across leagues. It might be an error in the original study. Apart from this, most results were consistent.
-- Minor differences in home advantage metrics across different scrapes.
 
 ## Variability Factors
 - **Source of Data**: Understat's league data from 2014–2020.
 - **Version of Data**: Potential inclusion of a larger dataset for extended analysis by using an other source.
 - **Statistical Tests**: Alternative tests for robustness.
+- *Environment*: Use of Python 3.9 for enhanced performance and compatibility with newer libraries.
 
 ### Draw Conclusions: Is it Reproducible?
 Yes, the study is reproducible with the provided tools and data pipeline. The results consistently support the hypothesis that COVID-19 affected home advantage in football.
@@ -93,7 +93,7 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
   | Version of Data    | 2014->2024                | Impacts consistency of random processes      |
   | Statistical Tests  | Test t, permutation_test | May affect computation time and results      |
   | Parameters         |    A voir       | Ensures comparability across experiments     |
-  | Version of Python  | 3.8, 3.9            | Compatibility and performance considerations |
+  | Version of Python  | 3.9            | Compatibility and performance considerations |
 
 - **Constraints Across Factors**:  
   - Document any constraints or interdependencies among variability factors.  
