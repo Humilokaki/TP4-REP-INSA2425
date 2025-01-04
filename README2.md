@@ -23,14 +23,14 @@ This study investigates whether the COVID-19 pandemic had an impact on the home 
 2. **Setting Up the Environment**  
    Use the provided `Dockerfile` to create a reproducible environment:
    ```bash
-   docker build -t covid-home-advantage .
+   docker build --build-arg MY_PYTHON_VERSION=3.8 --build-arg WORKFLOW=default -t covid-home-advantage .
    docker run -it -p 8888:8888 covid-home-advantage
    ```
 
 3. **Reproducing Results**  
    **Access JupyterLab** **If** you just runned the Dockerfile : 
    1. Open your browser and go to `http://localhost:8888` and use the token displayed in the terminal to log in.
-   2. Open `analysis/covid-home-advantage_analysis.ipynb` in your notebook environment with the kernel named `Python 3.8 (Docker REP project)`
+   2. Open `analysis/covid-home-advantage_analysis.ipynb` in your notebook environment with the kernel named `Python 3.8.x (Docker REP project)`
    3. Follow the steps to reproduce the analysis.
    **Else** :
    1. Run this command first and redo the steps above :
@@ -114,10 +114,11 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
 
 ### Replication Execution
 1. **Instructions**  
-   - Provide detailed steps or commands for running the replication(s):  
-     ```bash
-     bash scripts/replicate_experiment.sh
-     ```
+  Use the provided `Dockerfile` to create a replication environment (you can change the name of the image if you want both environments to be available on your machine):
+   ```bash
+   docker build --build-arg MY_PYTHON_VERSION=3.9 --build-arg WORKFLOW=replicate -t covid-home-advantage .
+   docker run -it -p 8888:8888 covid-home-advantage
+   ```
 
 2. **Presentation and Analysis of Results**  
    - Include results in text, tables, or figures.
