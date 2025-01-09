@@ -96,20 +96,6 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
   | Version of Python  | 3.9            | Compatibility and performance considerations |
 
 - **Constraints Across Factors**:  
-  - Document any constraints or interdependencies among variability factors.  
-    For example:
-    - Random Seed must align with dataset splits for consistent results.
-    - Hardware constraints may limit the choice of GPU-based factors.
-
-- **Exploring Variability Factors via CLI (Bonus)**  
-   - Provide instructions to use the command-line interface (CLI) to explore variability factors and their combinations:  
-     ```bash
-     python explore_variability.py --random-seed 42 --hardware GPU --dataset-version v1.1
-     ```
-   - Describe the functionality and parameters of the CLI:
-     - `--random-seed`: Specify the random seed to use.
-     - `--hardware`: Choose between CPU or GPU.
-     - `--dataset-version`: Select the dataset version.
 
 
 ### Replication Execution
@@ -121,13 +107,11 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
    ```
 
 2. **Presentation and Analysis of Results**  
-   - Include results in text, tables, or figures.
-   - Analyze and compare with the original study's findings.
+   - As we can see on the notebook, the difference in points gained at home and away and the mean points gained at home and away show that more points were gained away on the COVID season than other season on most championship. Moreover, we can see that a lot of statistics at home and away have big differencies except for the 2020 season for most championship. These results can also be linked to the result of the final test were there are big difference between xPoints and actual Points at home for the 2020 season for most championships.  
+   - With thes results, we can conclude that, in fact, the COVID season had a negative impact on the home advantage in most championship.
 
 ### Does It Confirm the Original Study?
-- Summarize the extent to which the replication supports the original study’s conclusions.
-- Highlight similarities and differences, if any.
+- Each point of the replicated study support the original one, even with others statistical test and the new data added to deepened the comprehension of this effect.
 
 ## Conclusion
-- Recap findings from the reproducibility and replicability sections.
-- Discuss limitations of your
+The study can be reproduce with all the data and tools that have been provided. It can also be replicate with more data and different statistical test ton find the same conclusion.
