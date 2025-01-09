@@ -113,7 +113,7 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
    docker build --build-arg MY_PYTHON_VERSION=3.9 --build-arg WORKFLOW=replicate -t covid-home-advantage .
    docker run -it -p 8888:8888 covid-home-advantage
    ```
-   Open the jupyter-notebook : *covid_home_advantage_analysis_replicability.ipynb"
+   Open the jupyter-notebook : *covid_home_advantage_analysis_replicability.ipynb*
    
 2. **Presentation and Analysis of Results**  
    - The analysis of replicated results, as shown in the notebook, highlights a notable trend: during the COVID-19 season, teams gained more points away than in previous seasons across most championships.  
