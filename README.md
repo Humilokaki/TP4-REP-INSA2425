@@ -28,8 +28,9 @@ This study will try to reproduce and replicate this article by Mathieu Acher, ht
    docker build --build-arg MY_PYTHON_VERSION=3.8 --build-arg WORKFLOW=default -t covid-home-advantage .
    docker run -it -p 8888:8888 covid-home-advantage
    ```
-
-3. **Reproducing Results**  
+   Open the jupyter-notebook : *covid_home_advantage_analysis.ipynb*
+   
+4. **Reproducing Results**  
    **Access JupyterLab** **If** you just runned the Dockerfile : 
    1. Open your browser and go to `http://localhost:8888` and use the token displayed in the terminal to log in.
    2. Open `analysis/covid-home-advantage_analysis.ipynb` in your notebook environment with the kernel named `Python 3.8.x (Docker REP project)`
@@ -74,7 +75,7 @@ The original study's methodology was reproducible with the given data and tools.
 - **Source of Data**: Understat's league data from 2014–2020.
 - **Version of Data**: Potential inclusion of a larger dataset for extended analysis by using an other source.
 - **Statistical Tests**: Alternative tests for robustness.
-- *Environment*: Use of Python 3.9 for enhanced performance and compatibility with newer libraries.
+- **Environment**: Use of Python 3.9 for enhanced performance and compatibility with newer libraries.
 
 ### Draw Conclusions: Is it Reproducible?
 Yes, the study is reproducible with the provided tools and data pipeline. The results consistently support the hypothesis that COVID-19 affected home advantage in football.
@@ -112,7 +113,8 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
    docker build --build-arg MY_PYTHON_VERSION=3.9 --build-arg WORKFLOW=replicate -t covid-home-advantage .
    docker run -it -p 8888:8888 covid-home-advantage
    ```
-
+   Open the jupyter-notebook : *covid_home_advantage_analysis_replicability.ipynb"
+   
 2. **Presentation and Analysis of Results**  
    - The analysis of replicated results, as shown in the notebook, highlights a notable trend: during the COVID-19 season, teams gained more points away than in previous seasons across most championships.  
    - The seasonal comparison of home and away statistics reveals significant differences during the 2020 season, contrasting with other seasons. Additionally, the disparity between xPoints (expected points) and actual points at home was more pronounced during the COVID season for most championships.  
