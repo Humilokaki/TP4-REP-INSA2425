@@ -124,7 +124,7 @@ for path in paths:
         ssl_client_socket.close()
 
 # Writing data to CSV
-output_file = "data/understat-football-matches-2014-2024.csv"
+output_file = "data/understat-football-matches.csv"
 
 with open(output_file, mode="w", newline="") as file:
     writer = csv.writer(file)
