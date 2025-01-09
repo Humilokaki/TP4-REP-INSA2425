@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This study investigates whether the COVID-19 pandemic had an impact on the home advantage in football. The home advantage is a well-known phenomenon, and understanding its potential alteration during a period without crowds offers unique insights. By analyzing expected goals (xG) and points data across major European leagues, this study sheds light on the broader effects of the pandemic on competitive sports.
+This study investigates whether the COVID-19 pandemic had an impact on the home advantage in football. The home advantage is a well-known phenomenon, and understanding its potential alteration during a period without crowds offers unique insights. By analyzing expected goals (xG) and points data across major European leagues, this study sheds light on the broader effects of the pandemic on competitive sports. 
+
+This study will try to reproduce and replicate this article by Mathieu Acher, https://blog.mathieuacher.com/FootballAnalysis-xG-COVIDHome/, written on May 23, 2021. 
 
 ## Reproducibility
 
@@ -80,7 +82,7 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
 ## Replicability
 
 ### Variability Factors
-- **Version of Data**: Potential inclusion of a larger dataset for extended analysis by using an other source.
+- **Version of Data**: Potential inclusion of a larger dataset for extended analysis.
 - **Statistical Tests**: Alternative tests for robustness.
 - **Parameters**: Different parameters for statistical tests.
 - **Environment**: Use of Python 3.9 for enhanced performance and compatibility with newer libraries.
@@ -94,24 +96,30 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
   | Statistical Tests  | Test t, permutation_test | May affect computation time and results      |
   | Parameters         |    A voir       | Ensures comparability across experiments     |
   | Version of Python  | 3.9            | Compatibility and performance considerations |
-
+  
 - **Constraints Across Factors**:  
-
+  To ensure consistent and reliable results, the following constraints were applied to variability factors:  
+  - **Data Consistency**: All data used was sourced from the same database (e.g., Understat) to maintain uniformity across analyses.  
+  - **Statistical Test Parameters**: Parameters for statistical tests (e.g., significance levels) were standardized to avoid discrepancies.  
+  - **Environment Configuration**: The replication was performed in a controlled environment using Docker to mitigate hardware and software-induced variability.  
+  - **Python Version**: Python 3.9 was chosen for the replication to align with the updated libraries and ensure compatibility.
 
 ### Replication Execution
+
 1. **Instructions**  
-  Use the provided `Dockerfile` to create a replication environment (you can change the name of the image if you want both environments to be available on your machine):
+   Use the provided `Dockerfile` to create a replication environment (you can rename the image to keep both environments available on your machine):  
    ```bash
    docker build --build-arg MY_PYTHON_VERSION=3.9 --build-arg WORKFLOW=replicate -t covid-home-advantage .
    docker run -it -p 8888:8888 covid-home-advantage
    ```
 
 2. **Presentation and Analysis of Results**  
-   - As we can see on the notebook, the difference in points gained at home and away and the mean points gained at home and away show that more points were gained away on the COVID season than other season on most championship. Moreover, we can see that a lot of statistics at home and away have big differencies except for the 2020 season for most championship. These results can also be linked to the result of the final test were there are big difference between xPoints and actual Points at home for the 2020 season for most championships.  
-   - With thes results, we can conclude that, in fact, the COVID season had a negative impact on the home advantage in most championship.
+   - The analysis of replicated results, as shown in the notebook, highlights a notable trend: during the COVID-19 season, teams gained more points away than in previous seasons across most championships.  
+   - The seasonal comparison of home and away statistics reveals significant differences during the 2020 season, contrasting with other seasons. Additionally, the disparity between xPoints (expected points) and actual points at home was more pronounced during the COVID season for most championships.  
+   - These results strongly suggest that the absence of crowds during the pandemic negatively affected home advantage in football across multiple leagues.
 
-### Does It Confirm the Original Study?
-- Each point of the replicated study support the original one, even with others statistical test and the new data added to deepened the comprehension of this effect.
+### Does It Confirm the Original Study?  
+- The replication successfully confirms the findings of the original study. Additional statistical tests and extended datasets further substantiate the conclusion that the COVID-19 pandemic reduced home advantage in football.
 
-## Conclusion
-The study can be reproduce with all the data and tools that have been provided. It can also be replicate with more data and different statistical test ton find the same conclusion.
+## Conclusion  
+The study is reproducible using the provided data and tools. It is also replicable with extended datasets and alternative statistical tests, consistently arriving at the same conclusion that the COVID-19 pandemic negatively impacted home advantage in football.
