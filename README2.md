@@ -123,3 +123,9 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
 
 ## Conclusion  
 The study is reproducible using the provided data and tools. It is also replicable with extended datasets and alternative statistical tests, consistently arriving at the same conclusion that the COVID-19 pandemic negatively impacted home advantage in football.
+
+
+### Contributors
+
+- **Aidan Gallagher**, Student at INSA Rennes in 4th year of computer sciences
+- **Noé Bourmalo**, Student at INSA Rennes in 4th year of computer sciences
