@@ -94,7 +94,7 @@ Yes, the study is reproducible with the provided tools and data pipeline. The re
   |--------------------|---------------------|----------------------------------------------|
   | Version of Data    | 2014->2024                | Impacts consistency of random processes      |
   | Statistical Tests  | Test t, permutation_test | May affect computation time and results      |
-  | Parameters         |    A voir       | Ensures comparability across experiments     |
+  | Parameters         |  Significance Level (α), Alternative Hypothesis (alternative) | Ensures comparability across experiments     |
   | Version of Python  | 3.9            | Compatibility and performance considerations |
   
 - **Constraints Across Factors**:  
